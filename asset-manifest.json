@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/meetup/static/css/main.d1b05096.chunk.css",
-    "main.js": "/meetup/static/js/main.00adfbff.chunk.js",
-    "main.js.map": "/meetup/static/js/main.00adfbff.chunk.js.map",
-    "runtime-main.js": "/meetup/static/js/runtime-main.77dbb4c9.js",
-    "runtime-main.js.map": "/meetup/static/js/runtime-main.77dbb4c9.js.map",
-    "static/js/2.a705ba64.chunk.js": "/meetup/static/js/2.a705ba64.chunk.js",
-    "static/js/2.a705ba64.chunk.js.map": "/meetup/static/js/2.a705ba64.chunk.js.map",
+    "main.css": "/meetup/static/css/main.ab41c251.chunk.css",
+    "main.js": "/meetup/static/js/main.f60bf22d.chunk.js",
+    "main.js.map": "/meetup/static/js/main.f60bf22d.chunk.js.map",
+    "runtime-main.js": "/meetup/static/js/runtime-main.fe17e9db.js",
+    "runtime-main.js.map": "/meetup/static/js/runtime-main.fe17e9db.js.map",
+    "static/js/2.9f573122.chunk.js": "/meetup/static/js/2.9f573122.chunk.js",
+    "static/js/2.9f573122.chunk.js.map": "/meetup/static/js/2.9f573122.chunk.js.map",
     "index.html": "/meetup/index.html",
-    "precache-manifest.9a5485d09dbf78287407f3a23fe4636f.js": "/meetup/precache-manifest.9a5485d09dbf78287407f3a23fe4636f.js",
+    "precache-manifest.4994baeab5b66edc54619c1a3af68587.js": "/meetup/precache-manifest.4994baeab5b66edc54619c1a3af68587.js",
     "service-worker.js": "/meetup/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/meetup/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.a705ba64.chunk.js.LICENSE": "/meetup/static/js/2.a705ba64.chunk.js.LICENSE",
-    "static/media/logo.svg": "/meetup/static/media/logo.5d5d9eef.svg"
+    "static/css/main.ab41c251.chunk.css.map": "/meetup/static/css/main.ab41c251.chunk.css.map",
+    "static/js/2.9f573122.chunk.js.LICENSE": "/meetup/static/js/2.9f573122.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.77dbb4c9.js",
-    "static/js/2.a705ba64.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.00adfbff.chunk.js"
+    "static/js/runtime-main.fe17e9db.js",
+    "static/js/2.9f573122.chunk.js",
+    "static/css/main.ab41c251.chunk.css",
+    "static/js/main.f60bf22d.chunk.js"
   ]
 }
