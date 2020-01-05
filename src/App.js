@@ -3,17 +3,28 @@ import "./App.css";
 import EventList from "./EventList";
 import CitySearch from "./CitySearch";
 import NumberOfEvents from "./NumberOfEvents";
+import { getEvents } from "./api";
 
 class App extends Component {
   state = {
-    events: []
+    events: [],
+    lat: null,
+    lon: null
+  };
+
+  componentDidMount() {
+    this.updateEvents();
+  }
+
+  updateEvents = (lat, lon) => {
+    getEvents(lat, lon).then(events => this.setState({ events }));
   };
   render() {
     return (
       <div className="App">
-        <CitySearch />
+        <CitySearch updateEvents={this.updateEvents} />
         <EventList events={this.state.events} />
-        <NumberOfEvents />
+        <NumberOfEvents updateEvents={this.updateEvents} />
       </div>
     );
   }
