@@ -22,6 +22,7 @@ class CitySearch extends Component {
     return (
       <div className="CitySearch">
         <input
+          placeholder="Search City"
           type="text"
           className="city"
           value={this.state.query}

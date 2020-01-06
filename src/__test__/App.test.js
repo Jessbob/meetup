@@ -46,4 +46,15 @@ describe("<App /> integration", () => {
     expect(AppWrapper.find(".Event")).toHaveLength(4);
     AppWrapper.unmount();
   });
+
+  test("get list of events from selected city", () => {
+    const AppWrapper = mount(<App />);
+    AppWrapper.instance().updateEvents = jest.fn();
+    AppWrapper.instance().forceUpdate();
+    const CitySearchWrapper = AppWrapper.find(CitySearch);
+    CitySearchWrapper.instance().handleItemClicked("value", 1.1, 1.2);
+    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledTimes(1);
+    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(1.1, 1.2);
+    AppWrapper.unmount();
+  });
 });
