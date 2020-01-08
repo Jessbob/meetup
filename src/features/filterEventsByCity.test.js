@@ -1,9 +1,9 @@
 import { loadFeature, defineFeature } from "jest-cucumber";
 import React from "react";
-import { mount, shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import App from "../App";
-import { mockEvents } from "../mock-events";
 import CitySearch from "../CitySearch";
+import { mockEvents } from "../mock-events";
 
 const feature = loadFeature("./src/features/filterEventsByCity.feature");
 
@@ -14,7 +14,6 @@ defineFeature(feature, test => {
     then
   }) => {
     given("user hasn’t searched for any city", () => {});
-
     let AppWrapper;
     when("the user opens the app", () => {
       AppWrapper = mount(<App />);
@@ -57,25 +56,22 @@ defineFeature(feature, test => {
 
   test("USER CAN SELECT A CITY FROM THE SUGGESTED LIST.", ({
     given,
+    and,
     when,
-    then,
-    and
+    then
   }) => {
     let AppWrapper;
-    given(
-      "user is typing “Munich” in the city textbox and the list of suggested cities is showing",
-      () => {
-        AppWrapper = mount(<App />);
-        AppWrapper.find(".city").simulate("change", {
-          target: { value: "Munich" }
-        });
+    given("user is typing “Munich” in the city textbox", () => {
+      AppWrapper = mount(<App />);
+      AppWrapper.find(".city").simulate("change", {
+        target: { value: "Munich" }
+      });
+    });
 
-        and("the list of suggested cities is showing", () => {
-          AppWrapper.update();
-          expect(AppWrapper.find(".suggestions li")).toHaveLength(2);
-        });
-      }
-    );
+    and("the list of suggested cities is showing", () => {
+      AppWrapper.update();
+      expect(AppWrapper.find(".suggestions li")).toHaveLength(2);
+    });
 
     when(
       "the user selects a city (e.g., “Munich, Germany”) from the list",

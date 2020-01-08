@@ -11,7 +11,8 @@ Feature: FILTER EVENTS BY CITY
                 Then the user should receive a list of cities (suggestions) that match what they’ve typed
 
         Scenario: USER CAN SELECT A CITY FROM THE SUGGESTED LIST.
-                Given user is typing “Munich” in the city textbox and the list of suggested cities is showing
+                Given user is typing “Munich” in the city textbox
+                And the list of suggested cities is showing
                 When the user selects a city (e.g., “Munich, Germany”) from the list
                 Then their city should be changed to that city (i.e., “Munich, Germany”)
                 And the user should receive a list of upcoming events in that city

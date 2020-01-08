@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class NumberOfEvents extends Component {
   state = {
-    number: 24
+    number: 32
   };
 
   onNumberChange = event => {
