@@ -37,7 +37,7 @@ async function getAccessToken() {
     if (!code) {
       // If we don't find any code, we need to redirect user to get it
       window.location.href =
-        "https://secure.meetup.com/oauth2/authorize?client_id=q0auq2h5ugp0dce6oibd8bat9t&response_type=code&redirect_uri=https://mvtuong.github.io/meetup/";
+        "https://secure.meetup.com/oauth2/authorize?client_id=q0auq2h5ugp0dce6oibd8bat9t&response_type=code&redirect_uri=https://jessbob.github.io/meetup/";
       return null;
     }
     return getOrRenewAccessToken("get", code);
