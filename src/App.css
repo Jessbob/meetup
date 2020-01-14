@@ -1,10 +1,14 @@
 .App {
   text-align: center;
   padding: 2% 5%;
+  background-color: #e7dcde71;
 }
 
 .App * {
   box-sizing: border-box;
+}
+h2 {
+  font-weight: 800;
 }
 
 ul {
@@ -25,7 +29,7 @@ input[type="number"] {
   font-size: 14px;
   line-height: 20px;
   align-self: center;
-  height: 38px;
+  height: 28px;
 }
 
 .city {
@@ -33,8 +37,11 @@ input[type="number"] {
 }
 
 .CitySearch {
-  display: flex;
-  flex-direction: column;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  /* display: flex;
+  flex-direction: column; */
+  float: left;
 }
 
 .suggestions {
@@ -60,9 +67,15 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
+.eventList {
+  width: 100%;
+  margin: auto;
+}
+
 .Event {
   padding: 10px 10px 20px;
   margin-bottom: 10px;
+  margin-top: 5px;
   text-align: left;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -77,6 +90,9 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  background-color: #5b96fd;
+  color: whitesmoke;
+  font-weight: 500;
 }
 
 .name {
@@ -99,7 +115,21 @@ input[type="number"] {
 }
 
 .number-of-events {
-  width: 80px;
-  margin: 20px 0 50px;
+  width: 50px;
+  margin-right: 5px;
   text-align: right;
+  vertical-align: bottom;
+}
+
+.headerBg {
+  background: transparent url("assets/images/hang_out.svg") no-repeat center
+    right / 50%;
+}
+.headerContent {
+  text-align: left;
+}
+
+.numberOfEventsWrapper {
+  text-align: right;
+  margin-right: 10px;
 }

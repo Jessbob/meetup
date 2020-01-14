@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getSuggestions } from "./api";
+import { InfoAlert, OfflineAlert } from "./Alert";
 
 class CitySearch extends Component {
   state = {
@@ -10,7 +11,30 @@ class CitySearch extends Component {
   handleInputChanged = event => {
     const value = event.target.value;
     this.setState({ query: value });
-    getSuggestions(value).then(suggestions => this.setState({ suggestions }));
+    if (!navigator.onLine) {
+      this.setState({
+        offlineText:
+          "Sorry, you are offline, we are unable to locate cities right now."
+      });
+    } else {
+      this.setState({
+        offlineText: ""
+      });
+    }
+    getSuggestions(value).then(suggestions => {
+      this.setState({ suggestions });
+
+      if (value && suggestions.length === 0) {
+        this.setState({
+          infoText:
+            "We can not find the city you are looking for please try another city"
+        });
+      } else {
+        this.setState({
+          infoText: ""
+        });
+      }
+    });
   };
 
   handleItemClicked = (value, lat, lon) => {
@@ -28,6 +52,7 @@ class CitySearch extends Component {
           value={this.state.query}
           onChange={this.handleInputChanged}
         />
+
         <ul className="suggestions">
           {this.state.suggestions.map(item => (
             <li
@@ -41,6 +66,8 @@ class CitySearch extends Component {
             </li>
           ))}
         </ul>
+        <InfoAlert className="infoAlert" text={this.state.infoText} />
+        <OfflineAlert text={this.state.offlineText} />
       </div>
     );
   }
